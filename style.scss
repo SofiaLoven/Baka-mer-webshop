@@ -19,6 +19,21 @@ $buttonHover:rgb(212, 190, 185);
     font-family: $fontFamilyText;
     text-align: center;
 }
+@mixin hr{
+    border-top:3px solid $headtextAndFonts;
+    width: 90%;
+}
+@mixin button {
+    background: $buttonColor;
+    color: $fontFamilyHeading;
+    border: none;
+    border-radius: 10px;
+    font-family: $fontFamilyText;
+    &:hover{
+        cursor: pointer;
+        background: $buttonHover;
+    }
+}
 @mixin flex(
     $direction: row,
     $justify: flex-start,
@@ -33,6 +48,7 @@ $buttonHover:rgb(212, 190, 185);
 }
 body{
     background: rgba(242, 233, 228, 1);
+    margin: 0;
 }
 header{
     @include flex($justify: space-between);
@@ -41,7 +57,7 @@ header{
     height: 130px;
     width: 100%;
     .fontHeading{
-        font-size: 25px;
+        font-size: 1.3rem;
         margin: 5px;
         color: $headtextAndFonts;
     }
@@ -74,9 +90,6 @@ header{
     }
 }
 footer{
-    /*position: fixed;
-    width: 100%;
-    bottom:0;*/
     @include flex($direction:column);
     background: $footAndHead;
     .footerTop{
@@ -88,7 +101,7 @@ footer{
         }
         .loggaFooter{
             font-family: $fontFamilyHeading;
-            font-size: 20px;
+            font-size: 1.3rem;
         }
     }
     .footerBottom{
@@ -111,8 +124,10 @@ footer{
                 list-style-type: none;
                 padding: 0px;
             }
-            li{
+            a{
                 margin:0px;
+                text-decoration: none;
+                color: $headtextAndFonts;
                 &:hover{
                     cursor: pointer;
                     color: white;
@@ -125,6 +140,10 @@ footer{
             padding-left: 5px;
         }
     }
+}
+.websideHeading{
+    @include heading;
+    font-size: 2rem;
 }
 /*Huvudsidan*/
 .welcomePicture{
@@ -146,17 +165,9 @@ footer{
         text-decoration: none;
     }
     button{
-            background: $buttonColor;
-            color: $fontFamilyHeading;
-            width: 170px;
-            border: none;
-            border-radius: 10px;
-            font-family: $fontFamilyText;
-            font-size: 1.2rem;
-            &:hover{
-                cursor: pointer;
-                background: $buttonHover;
-            }
+        @include button;
+        width: 170px;
+        font-size: 1.2rem;
     }        
 }
 .mainSection{
@@ -180,26 +191,14 @@ footer{
                 font-size: 1.2rem;
             }
         }
-        > div:nth-of-type(1){
-            @include flex($justify:space-evenly);
-            width:100%;
-        }
-        > div:nth-of-type(2){
+        > div{
             @include flex($justify:space-evenly);
             width:100%;
         }
         button{
-            background: $buttonColor;
-            color: $fontFamilyHeading;
+            @include button;
             width: 70px;
-            border: none;
-            border-radius: 10px;
-            font-family: $fontFamilyText;
             font-size: 1rem;
-            &:hover{
-                cursor: pointer;
-                background: $buttonHover;
-            }
             i{
                 margin-left:10px;
             }
@@ -252,6 +251,120 @@ footer{
         > div{
             @include flex($justify:space-evenly);
             width: 100%;
+        }
+    }
+}
+/*Produkter*/
+.sectionProduct{
+    h2{
+        @include heading;
+    }
+    hr{
+        @include hr;
+    }
+    .allProducts{
+        @include flex($direction:column, $align:center);
+        > div{
+            @include flex($justify:space-evenly);
+            width: 100%;
+        }
+        .product{
+            @include flex($direction:column, $align:center);
+            width: 150px;
+            margin:20px 0;
+            img{
+                height: 100px;
+                @include border;
+            }
+            p{
+                @include mainText;
+            }
+            button{
+                @include button;
+            }
+        }
+    }
+}
+/*Kontakt*/
+.contactInfo{
+    @include flex($direction:column, $align:center);
+    img{
+        height:200px;
+        @include border;
+    }
+    figcaption{
+        @include mainText;
+        font-size: 0.7rem;
+    }
+    h2{
+        @include heading;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+    p{
+        @include mainText;
+        margin-top: 0;
+    }
+}
+.contactForm{
+    @include flex($direction:column, $align:center);
+    margin-bottom: 20px;
+    h3{
+        @include heading;
+        font-size: 1.4rem;
+    }
+    form{
+        @include flex($direction:column, $align:center);
+        @include mainText;
+        input, textarea{
+           @include border;
+        }
+        > div{
+            text-align: center;
+        }
+        input[type="submit"]{
+            @include button;
+        }
+    }
+}
+/*Recensioer*/
+.stars{
+    text-align: center;
+    color:$buttonColor;
+}
+hr{
+    @include hr;
+}
+.reviews{
+    margin: 10px 20px;
+    p{
+        @include mainText;
+    }
+
+}
+.sendReview{
+    h3{
+        @include heading;
+        font-size: 1.6rem;
+    }
+    form{
+        margin:20px;
+        @include mainText;
+        input, textarea{
+            @include border;
+        }
+        input[type="submit"]{
+            @include button;
+        }
+        input[type="checkbox"]{
+            appearance: none; 
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 2px solid $headtextAndFonts;
+        }
+        input[type="checkbox"]:checked{
+            background: $buttonColor;
         }
     }
 }

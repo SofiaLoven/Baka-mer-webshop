@@ -1,5 +1,6 @@
 body {
   background: rgb(242, 233, 228);
+  margin: 0;
 }
 
 header {
@@ -14,7 +15,7 @@ header {
   width: 100%;
 }
 header .fontHeading {
-  font-size: 25px;
+  font-size: 1.3rem;
   margin: 5px;
   color: rgb(34, 34, 59);
 }
@@ -59,9 +60,6 @@ header .headerRight {
 }
 
 footer {
-  /*position: fixed;
-  width: 100%;
-  bottom:0;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -83,7 +81,7 @@ footer .footerTop #loggaFooter {
 }
 footer .footerTop .loggaFooter {
   font-family: Space grotesk, Georgia;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 footer .footerBottom {
   display: flex;
@@ -115,10 +113,12 @@ footer .footerBottom nav ul {
   list-style-type: none;
   padding: 0px;
 }
-footer .footerBottom nav li {
+footer .footerBottom nav a {
   margin: 0px;
+  text-decoration: none;
+  color: rgb(34, 34, 59);
 }
-footer .footerBottom nav li:hover {
+footer .footerBottom nav a:hover {
   cursor: pointer;
   color: white;
 }
@@ -126,6 +126,13 @@ footer .footerBottom .copyright {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   padding-left: 5px;
+}
+
+.websideHeading {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /*Huvudsidan*/
@@ -160,10 +167,10 @@ footer .footerBottom .copyright {
 .welcomeText button {
   background: rgb(201, 173, 167);
   color: Space grotesk, Georgia;
-  width: 170px;
   border: none;
   border-radius: 10px;
   font-family: Concert One, arial;
+  width: 170px;
   font-size: 1.2rem;
 }
 .welcomeText button:hover {
@@ -205,15 +212,7 @@ footer .footerBottom .copyright {
   text-align: center;
   font-size: 1.2rem;
 }
-.mainSection .popularProducts > div:nth-of-type(1) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-.mainSection .popularProducts > div:nth-of-type(2) {
+.mainSection .popularProducts > div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -224,10 +223,10 @@ footer .footerBottom .copyright {
 .mainSection .popularProducts button {
   background: rgb(201, 173, 167);
   color: Space grotesk, Georgia;
-  width: 70px;
   border: none;
   border-radius: 10px;
   font-family: Concert One, arial;
+  width: 70px;
   font-size: 1rem;
 }
 .mainSection .popularProducts button:hover {
@@ -312,4 +311,196 @@ footer .footerBottom .copyright {
   align-items: flex-start;
   flex-wrap: nowrap;
   width: 100%;
+}
+
+/*Produkter*/
+.sectionProduct h2 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+}
+.sectionProduct hr {
+  border-top: 3px solid rgb(34, 34, 59);
+  width: 90%;
+}
+.sectionProduct .allProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sectionProduct .allProducts > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.sectionProduct .allProducts .product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 150px;
+  margin: 20px 0;
+}
+.sectionProduct .allProducts .product img {
+  height: 100px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.sectionProduct .allProducts .product p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+}
+.sectionProduct .allProducts .product button {
+  background: rgb(201, 173, 167);
+  color: Space grotesk, Georgia;
+  border: none;
+  border-radius: 10px;
+  font-family: Concert One, arial;
+}
+.sectionProduct .allProducts .product button:hover {
+  cursor: pointer;
+  background: rgb(212, 190, 185);
+}
+
+/*Kontakt*/
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.contactInfo img {
+  height: 200px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.contactInfo figcaption {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.contactInfo h2 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+.contactInfo p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  margin-top: 0;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+.contactForm h3 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+}
+.contactForm form input, .contactForm form textarea {
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.contactForm form > div {
+  text-align: center;
+}
+.contactForm form input[type=submit] {
+  background: rgb(201, 173, 167);
+  color: Space grotesk, Georgia;
+  border: none;
+  border-radius: 10px;
+  font-family: Concert One, arial;
+}
+.contactForm form input[type=submit]:hover {
+  cursor: pointer;
+  background: rgb(212, 190, 185);
+}
+
+/*Recensioer*/
+.stars {
+  text-align: center;
+  color: rgb(201, 173, 167);
+}
+
+hr {
+  border-top: 3px solid rgb(34, 34, 59);
+  width: 90%;
+}
+
+.reviews {
+  margin: 10px 20px;
+}
+.reviews p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+}
+
+.sendReview h3 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.sendReview form {
+  margin: 20px;
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+}
+.sendReview form input, .sendReview form textarea {
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.sendReview form input[type=submit] {
+  background: rgb(201, 173, 167);
+  color: Space grotesk, Georgia;
+  border: none;
+  border-radius: 10px;
+  font-family: Concert One, arial;
+}
+.sendReview form input[type=submit]:hover {
+  cursor: pointer;
+  background: rgb(212, 190, 185);
+}
+.sendReview form input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgb(34, 34, 59);
+}
+.sendReview form input[type=checkbox]:checked {
+  background: rgb(201, 173, 167);
 }/*# sourceMappingURL=style.css.map */
