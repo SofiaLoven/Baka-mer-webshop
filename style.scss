@@ -1,0 +1,257 @@
+$headtextAndFonts: rgba(34, 34, 59, 1);
+$fontFamilyHeading: Space grotesk, Georgia;
+$fontFamilyText: Concert One, arial;
+$footAndHead: rgba(154, 140, 152, 1);
+$mainText: rgba(74, 78, 105, 1);
+$buttonColor: rgba(201, 173, 167, 1);
+$buttonHover:rgb(212, 190, 185);
+@mixin border{
+    border: 2px solid $mainText;
+    border-radius: 10px;
+}
+@mixin heading{
+    color: $headtextAndFonts;
+    font-family: $fontFamilyHeading;
+    text-align:center;
+}
+@mixin mainText {
+    color: $mainText;
+    font-family: $fontFamilyText;
+    text-align: center;
+}
+@mixin flex(
+    $direction: row,
+    $justify: flex-start,
+    $align: flex-start,
+    $wrap: nowrap
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align; 
+    flex-wrap: $wrap;
+}
+body{
+    background: rgba(242, 233, 228, 1);
+}
+header{
+    @include flex($justify: space-between);
+    position: relative;
+    background: $footAndHead;
+    height: 130px;
+    width: 100%;
+    .fontHeading{
+        font-size: 25px;
+        margin: 5px;
+        color: $headtextAndFonts;
+    }
+    .headerLeft{
+        @include flex($align:center);
+        height: 130px;
+        padding: 5px;
+    }
+    .headerMiddle{
+        @include flex($direction:column, $align:center);
+        height: 130px;
+    }
+    .loggaHeader{
+        position: absolute;
+        top:40px;
+        font-family: $fontFamilyHeading;
+        font-size: 30px;
+        color: $headtextAndFonts;
+    }
+    #loggaHeader{
+        position: absolute;
+        top: 20px;
+        height:60px;
+        width:60px;
+    }
+    .headerRight{
+        @include flex($align:center);
+        padding: 5px; 
+        height: 130px;
+    }
+}
+footer{
+    /*position: fixed;
+    width: 100%;
+    bottom:0;*/
+    @include flex($direction:column);
+    background: $footAndHead;
+    .footerTop{
+        @include flex;
+        padding-top: 10px;
+        #loggaFooter{
+            height: 50px;
+            margin: 5px;
+        }
+        .loggaFooter{
+            font-family: $fontFamilyHeading;
+            font-size: 20px;
+        }
+    }
+    .footerBottom{
+        @include flex($direction:column);
+        nav{
+            @include flex($direction:column);
+            position: relative;
+            padding-left: 5px;
+            height:150px;
+            p{
+                position: absolute;
+                top: 0px;
+                font-family: $fontFamilyHeading;
+                font-size: 20px;
+                text-decoration: underline
+            }
+            ul{
+                position: absolute;
+                top:35px;
+                list-style-type: none;
+                padding: 0px;
+            }
+            li{
+                margin:0px;
+                &:hover{
+                    cursor: pointer;
+                    color: white;
+                }
+            }
+        }
+        .copyright{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            padding-left: 5px;
+        }
+    }
+}
+/*Huvudsidan*/
+.welcomePicture{
+    width: 100%;
+    margin:5px 0;
+}
+.welcomeText{
+    padding:10px;
+    h1{
+        @include heading;
+        font-size: 2.5rem;
+    }
+    p{
+        @include mainText;
+        font-size: 1.2rem;
+    }
+    a{
+        @include flex($justify:center);
+        text-decoration: none;
+    }
+    button{
+            background: $buttonColor;
+            color: $fontFamilyHeading;
+            width: 170px;
+            border: none;
+            border-radius: 10px;
+            font-family: $fontFamilyText;
+            font-size: 1.2rem;
+            &:hover{
+                cursor: pointer;
+                background: $buttonHover;
+            }
+    }        
+}
+.mainSection{
+    h2{
+        @include heading;
+        font-size: 1.7rem;
+    }
+    .popularProducts{
+        @include flex($direction:column);
+        .productPicture{
+            height: 100px;
+            @include border;
+        }
+        .product.popular{
+            @include flex($direction:column, $align: center);
+            height: 200px;
+            width: 150px;
+            margin: 20px 0;
+            p{
+                @include mainText;
+                font-size: 1.2rem;
+            }
+        }
+        > div:nth-of-type(1){
+            @include flex($justify:space-evenly);
+            width:100%;
+        }
+        > div:nth-of-type(2){
+            @include flex($justify:space-evenly);
+            width:100%;
+        }
+        button{
+            background: $buttonColor;
+            color: $fontFamilyHeading;
+            width: 70px;
+            border: none;
+            border-radius: 10px;
+            font-family: $fontFamilyText;
+            font-size: 1rem;
+            &:hover{
+                cursor: pointer;
+                background: $buttonHover;
+            }
+            i{
+                margin-left:10px;
+            }
+        }
+    }
+}
+/*Om oss*/
+.motto{
+    text-align: center;
+    font-style: italic;
+    h2{
+        @include heading;
+        font-size: 1.1rem;
+    }
+    p{
+        @include mainText;
+        font-size: 0.9rem;
+    }
+}
+.ourHistory{
+    @include flex($direction:column, $align:center);
+    img{
+        height:220px;
+        @include border;
+    }
+    h3{
+        @include heading;
+        font-size: 1.2rem;
+    }
+    p{
+        @include mainText;
+        font-size: 0.9rem;
+    }
+}
+.allEmployee{
+    h4{
+        @include heading;
+        font-size: 1.2rem;
+    }
+    .employeePicture{
+        height:100px;
+        @include border;
+    }
+    p{
+        @include mainText;
+        font-size: 0.9rem;
+    }
+    > div:nth-of-type(1){
+        @include flex($direction:column, $align:center);
+        > div{
+            @include flex($justify:space-evenly);
+            width: 100%;
+        }
+    }
+}

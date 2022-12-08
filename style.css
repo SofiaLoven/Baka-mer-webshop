@@ -1,0 +1,315 @@
+body {
+  background: rgb(242, 233, 228);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
+  background: rgb(154, 140, 152);
+  height: 130px;
+  width: 100%;
+}
+header .fontHeading {
+  font-size: 25px;
+  margin: 5px;
+  color: rgb(34, 34, 59);
+}
+header .headerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 130px;
+  padding: 5px;
+}
+header .headerMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 130px;
+}
+header .loggaHeader {
+  position: absolute;
+  top: 40px;
+  font-family: Space grotesk, Georgia;
+  font-size: 30px;
+  color: rgb(34, 34, 59);
+}
+header #loggaHeader {
+  position: absolute;
+  top: 20px;
+  height: 60px;
+  width: 60px;
+}
+header .headerRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 5px;
+  height: 130px;
+}
+
+footer {
+  /*position: fixed;
+  width: 100%;
+  bottom:0;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  background: rgb(154, 140, 152);
+}
+footer .footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding-top: 10px;
+}
+footer .footerTop #loggaFooter {
+  height: 50px;
+  margin: 5px;
+}
+footer .footerTop .loggaFooter {
+  font-family: Space grotesk, Georgia;
+  font-size: 20px;
+}
+footer .footerBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+footer .footerBottom nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-left: 5px;
+  height: 150px;
+}
+footer .footerBottom nav p {
+  position: absolute;
+  top: 0px;
+  font-family: Space grotesk, Georgia;
+  font-size: 20px;
+  text-decoration: underline;
+}
+footer .footerBottom nav ul {
+  position: absolute;
+  top: 35px;
+  list-style-type: none;
+  padding: 0px;
+}
+footer .footerBottom nav li {
+  margin: 0px;
+}
+footer .footerBottom nav li:hover {
+  cursor: pointer;
+  color: white;
+}
+footer .footerBottom .copyright {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+/*Huvudsidan*/
+.welcomePicture {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.welcomeText {
+  padding: 10px;
+}
+.welcomeText h1 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.welcomeText p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.welcomeText a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  text-decoration: none;
+}
+.welcomeText button {
+  background: rgb(201, 173, 167);
+  color: Space grotesk, Georgia;
+  width: 170px;
+  border: none;
+  border-radius: 10px;
+  font-family: Concert One, arial;
+  font-size: 1.2rem;
+}
+.welcomeText button:hover {
+  cursor: pointer;
+  background: rgb(212, 190, 185);
+}
+
+.mainSection h2 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.mainSection .popularProducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.mainSection .popularProducts .productPicture {
+  height: 100px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.mainSection .popularProducts .product.popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 200px;
+  width: 150px;
+  margin: 20px 0;
+}
+.mainSection .popularProducts .product.popular p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.mainSection .popularProducts > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.mainSection .popularProducts > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.mainSection .popularProducts button {
+  background: rgb(201, 173, 167);
+  color: Space grotesk, Georgia;
+  width: 70px;
+  border: none;
+  border-radius: 10px;
+  font-family: Concert One, arial;
+  font-size: 1rem;
+}
+.mainSection .popularProducts button:hover {
+  cursor: pointer;
+  background: rgb(212, 190, 185);
+}
+.mainSection .popularProducts button i {
+  margin-left: 10px;
+}
+
+/*Om oss*/
+.motto {
+  text-align: center;
+  font-style: italic;
+}
+.motto h2 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.motto p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.ourHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.ourHistory img {
+  height: 220px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.ourHistory h3 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.ourHistory p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.allEmployee h4 {
+  color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.allEmployee .employeePicture {
+  height: 100px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+}
+.allEmployee p {
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.allEmployee > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.allEmployee > div:nth-of-type(1) > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
