@@ -2,8 +2,10 @@ $headtextAndFonts: rgba(34, 34, 59, 1);
 $fontFamilyHeading: Space grotesk, Georgia;
 $fontFamilyText: Concert One, arial;
 $footAndHead: rgba(154, 140, 152, 1);
+$lightHeading: rgba(154, 140, 152, 0.84);
 $mainText: rgba(74, 78, 105, 1);
 $buttonColor: rgba(201, 173, 167, 1);
+$activeColor: rgb(202, 111, 90);
 $buttonHover:rgb(212, 190, 185);
 @mixin border{
     border: 2px solid $mainText;
@@ -34,6 +36,11 @@ $buttonHover:rgb(212, 190, 185);
         background: $buttonHover;
     }
 }
+@mixin desktop{
+    @media (min-width:400px){
+        @content;
+    }
+}
 @mixin flex(
     $direction: row,
     $justify: flex-start,
@@ -51,94 +58,202 @@ body{
     margin: 0;
 }
 header{
-    @include flex($justify: space-between);
-    position: relative;
-    background: $footAndHead;
-    height: 130px;
+    position: fixed;
     width: 100%;
-    .fontHeading{
-        font-size: 1.3rem;
-        margin: 5px;
-        color: $headtextAndFonts;
-    }
-    .headerLeft{
-        @include flex($align:center);
+    top:0;
+    .header{
+        @include flex($justify: space-between);
+        position: relative;
+        background: $lightHeading;
         height: 130px;
-        padding: 5px;
+        width: 100%;
+        @include desktop{
+            height: 100px;
+        }
+        .fontHeading{
+            font-size: 1.3rem;
+            margin: 5px;
+            color: $headtextAndFonts;
+        }
+        .headerLeft{
+            @include flex($align:center);
+            height: 130px;
+            padding: 5px;
+            color: $headtextAndFonts;
+            @include desktop{
+                display: none;
+            }
+        }
+        .headerMiddle{
+            @include flex($direction:column, $align:center);
+            height: 130px;
+            @include desktop{
+                @include flex($align:center);
+                height: 100px;
+                margin-left: 20px;
+            }
+        }
+        .loggaHeader{
+            position: absolute;
+            top:40px;
+            font-family: $fontFamilyHeading;
+            font-size: 30px;
+            color: $headtextAndFonts;
+            @include desktop{
+                font-size: 20px;
+
+            }
+        }
+        #loggaHeader{
+            position: absolute;
+            top: 20px;
+            height:60px;
+            width:60px;
+            @include desktop{
+                height: 40px;
+                width:40px;
+            }
+        }
+        .headerRight{
+            @include flex($align:center);
+            padding: 5px; 
+            height: 130px;
+            color: $headtextAndFonts;
+            @include desktop{
+                @include flex($justify:flex-end, $align:center);
+                height: 100px;
+                margin-right: 20px;
+            }
+        }
+        .navigation{
+            display: none;
+            @include desktop{
+                display: inline;
+                position: absolute;
+                right: 320px;
+            }
+        }
+        nav{
+            display: none;
+            @include desktop{
+                display: inline;
+                position: relative;
+                ul{
+                    @include flex($justify:space-evenly);
+                    position: absolute;
+                    top:70px;
+                    width: 300px;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                a{
+                    color: $headtextAndFonts;
+                    font-family: $fontFamilyHeading;
+                    text-decoration: none;
+                    font-size: 10px;
+                    margin: 8px;
+                    &:hover{
+                        color: $activeColor;
+                        text-decoration: underline;
+                    }
+                }
+                .active{
+                    color: $activeColor;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
-    .headerMiddle{
-        @include flex($direction:column, $align:center);
-        height: 130px;
-    }
-    .loggaHeader{
-        position: absolute;
-        top:40px;
-        font-family: $fontFamilyHeading;
-        font-size: 30px;
-        color: $headtextAndFonts;
-    }
-    #loggaHeader{
-        position: absolute;
-        top: 20px;
-        height:60px;
-        width:60px;
-    }
-    .headerRight{
-        @include flex($align:center);
-        padding: 5px; 
-        height: 130px;
-    }
-}
+}    
 footer{
     @include flex($direction:column);
     background: $footAndHead;
+    > div:nth-of-type(1){
+        @include desktop{
+            @include flex($justify:space-between);
+            width: 100%;
+        }
+    }
     .footerTop{
         @include flex;
         padding-top: 10px;
         #loggaFooter{
             height: 50px;
-            margin: 5px;
+            margin: 5px 10px;
         }
         .loggaFooter{
             font-family: $fontFamilyHeading;
             font-size: 1.3rem;
         }
     }
-    .footerBottom{
+    .footerNav{
         @include flex($direction:column);
         nav{
             @include flex($direction:column);
-            position: relative;
             padding-left: 5px;
-            height:150px;
+            @include desktop{
+                margin: 10px;
+            }
             p{
-                position: absolute;
-                top: 0px;
                 font-family: $fontFamilyHeading;
-                font-size: 20px;
-                text-decoration: underline
+                font-size: 1.1rem;
+                color: $headtextAndFonts;
+                margin:0 10px;
+            }
+            hr{
+                border-top:1px solid $headtextAndFonts;
+                margin: 0 10px;
             }
             ul{
-                position: absolute;
-                top:35px;
                 list-style-type: none;
-                padding: 0px;
+                padding: 0;
+                margin: 0 10px;
             }
             a{
                 margin:0px;
                 text-decoration: none;
                 color: $headtextAndFonts;
+                font-family: $fontFamilyHeading;
                 &:hover{
                     cursor: pointer;
-                    color: white;
+                    color: $activeColor;
                 }
             }
         }
-        .copyright{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 10px;
-            padding-left: 5px;
+    }
+    .footerContact{
+        display: none;
+        @include desktop{
+            display: inline;
+            margin: 10px 20px 10px 0;
+            p{
+                font-family: $fontFamilyHeading;
+                font-size: 1.1rem;
+                color: $headtextAndFonts;
+                margin:0;
+            }
+            hr{
+                border-top:1px solid $headtextAndFonts;
+                margin:0;
+            }
+            ul{
+                list-style-type: none;
+                margin:0;
+                padding: 0;
+            }
+            li{
+                color: $headtextAndFonts;
+                font-family: $fontFamilyHeading;
+            }
+
         }
+
+    }
+    .copyright{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        padding-left: 10px;
     }
 }
 .websideHeading{
@@ -146,37 +261,66 @@ footer{
     font-size: 2rem;
 }
 /*Huvudsidan*/
-.welcomePicture{
-    width: 100%;
-    margin:5px 0;
-}
 .welcomeText{
-    padding:10px;
-    h1{
-        @include heading;
-        font-size: 2.5rem;
+    @include desktop{
+        @include flex;
     }
-    p{
-        @include mainText;
-        font-size: 1.2rem;
+    .welcomePicture{
+        width: 100%;
+        margin-top: 125px;
+        @include desktop{
+            height: 160px;
+            width: 250px;
+            @include border;
+            margin-left: 10px; 
+        }
     }
-    a{
-        @include flex($justify:center);
-        text-decoration: none;
-    }
-    button{
-        @include button;
-        width: 170px;
-        font-size: 1.2rem;
-    }        
+    .textMainSite{
+        @include desktop{
+            margin-top:100px;
+        }
+        h1{
+            @include heading;
+            font-size: 2.5rem;
+            @include desktop{
+                font-size: 2rem;
+            }
+        }
+        p{
+            @include mainText;
+            font-size: 1.2rem;
+            @include desktop{
+                font-size: 1rem;
+            }
+        }
+        a{
+            @include flex($justify:center);
+            text-decoration: none;
+        }
+        button{
+            @include button;
+            width: 170px;
+            font-size: 1.2rem;
+            @include mainText;
+        }  
+    }             
 }
 .mainSection{
+    @include desktop{
+        margin: 40px 0;
+    }
     h2{
         @include heading;
         font-size: 1.7rem;
+        @include desktop{
+            font-size: 1.3rem;
+        }
     }
     .popularProducts{
         @include flex($direction:column);
+        @include desktop{
+            @include flex($direction:row);
+        }
         .productPicture{
             height: 100px;
             @include border;

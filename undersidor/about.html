@@ -11,6 +11,7 @@
 </head>
 <body>
     <header>
+    <div class="header">
         <div class="headerLeft">
             <i class="fa-solid fa-bars fontHeading"></i>
             <i class="fa-solid fa-magnifying-glass fontHeading"></i>
@@ -19,10 +20,20 @@
             <img id="loggaHeader" src="./../images/Logga.png" alt="Företagets logga">
             <p class="loggaHeader">Baka mer</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="./../index.html">Hem</a></li>
+                <li><a class="active" href="./about.html">Om oss</a></li>
+                <li><a href="./products.html">Produkter</a></li>
+                <li><a href="./contact.html">Kontakt</a></li>
+                <li><a href="./review.html">Recensioner</a></li>
+            </ul>
+        </nav>
         <div class="headerRight">
             <i class="fa-solid fa-user fontHeading"></i>
             <i class="fa-solid fa-bag-shopping fontHeading"></i>
         </div>
+    </div>
     </header>
     <main>
         <h1 class="websideHeading">Om oss</h1>
@@ -72,23 +83,35 @@
         </section>
     </main>
     <footer>
-        <div class="footerTop">
-            <img id="loggaFooter" src="./../images/Logga.png" alt="Företagets logga">
-            <p class="loggaFooter">Baka mer</p>
-        </div>
-        <div class="footerBottom">
-            <nav>
-                <p>Länkar</p>
-                <ul>
-                    <li><a class="linksFooter" href="./../index.html">Hem</a></li>
-                    <li><a class="linksFooter" href="./about.html">Om oss</a></li>
-                    <li><a class="linksFooter" href="./products.html">Produkter</a></li>
-                    <li><a class="linksFooter" href="./contact.html">Kontakt</a></li>
-                    <li><a class="linksFooter" href="./review.html">Recensioner</a></li>
-                </ul>
-            </nav>    
-            <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
-        </div>
+        <div>
+            <div class="footerTop">
+                <img id="loggaFooter" src="./../images/Logga.png" alt="Företagets logga">
+                <p class="loggaFooter">Baka mer</p>
+            </div>
+            <div class="footerNav">
+                <nav>
+                    <p>Länkar</p>
+                    <hr>
+                        <ul>
+                        <li><a class="linksFooter" href="./../index.html">Hem</a></li>
+                        <li><a class="linksFooter" href="./about.html">Om oss</a></li>
+                        <li><a class="linksFooter" href="./products.html">Produkter</a></li>
+                        <li><a class="linksFooter" href="./contact.html">Kontakt</a></li>
+                        <li><a class="linksFooter" href="./review.html">Recensioner</a></li>
+                    </ul>
+                </div>
+                <div class="footerContact">
+                    <p>Konakt</p>
+                    <hr>
+                    <ul>
+                        <li>018-30 40 06</li>
+                        <li>Hundvägen 18</br> 16866 Bromma</li>
+                    </ul>
+                </div>   
+            </div>
+                <div>
+                <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
+            </div>
     </footer>
 </body>
 </html>

@@ -4,22 +4,32 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+header .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
   position: relative;
-  background: rgb(154, 140, 152);
+  background: rgba(154, 140, 152, 0.84);
   height: 130px;
   width: 100%;
 }
-header .fontHeading {
+@media (min-width: 400px) {
+  header .header {
+    height: 100px;
+  }
+}
+header .header .fontHeading {
   font-size: 1.3rem;
   margin: 5px;
   color: rgb(34, 34, 59);
 }
-header .headerLeft {
+header .header .headerLeft {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -27,8 +37,14 @@ header .headerLeft {
   flex-wrap: nowrap;
   height: 130px;
   padding: 5px;
+  color: rgb(34, 34, 59);
 }
-header .headerMiddle {
+@media (min-width: 400px) {
+  header .header .headerLeft {
+    display: none;
+  }
+}
+header .header .headerMiddle {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -36,20 +52,42 @@ header .headerMiddle {
   flex-wrap: nowrap;
   height: 130px;
 }
-header .loggaHeader {
+@media (min-width: 400px) {
+  header .header .headerMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100px;
+    margin-left: 20px;
+  }
+}
+header .header .loggaHeader {
   position: absolute;
   top: 40px;
   font-family: Space grotesk, Georgia;
   font-size: 30px;
   color: rgb(34, 34, 59);
 }
-header #loggaHeader {
+@media (min-width: 400px) {
+  header .header .loggaHeader {
+    font-size: 20px;
+  }
+}
+header .header #loggaHeader {
   position: absolute;
   top: 20px;
   height: 60px;
   width: 60px;
 }
-header .headerRight {
+@media (min-width: 400px) {
+  header .header #loggaHeader {
+    height: 40px;
+    width: 40px;
+  }
+}
+header .header .headerRight {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -57,6 +95,65 @@ header .headerRight {
   flex-wrap: nowrap;
   padding: 5px;
   height: 130px;
+  color: rgb(34, 34, 59);
+}
+@media (min-width: 400px) {
+  header .header .headerRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100px;
+    margin-right: 20px;
+  }
+}
+header .header .navigation {
+  display: none;
+}
+@media (min-width: 400px) {
+  header .header .navigation {
+    display: inline;
+    position: absolute;
+    right: 320px;
+  }
+}
+header .header nav {
+  display: none;
+}
+@media (min-width: 400px) {
+  header .header nav {
+    display: inline;
+    position: relative;
+  }
+  header .header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 70px;
+    width: 300px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  header .header nav a {
+    color: rgb(34, 34, 59);
+    font-family: Space grotesk, Georgia;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 8px;
+  }
+  header .header nav a:hover {
+    color: rgb(202, 111, 90);
+    text-decoration: underline;
+  }
+  header .header nav .active {
+    color: rgb(202, 111, 90);
+    text-decoration: underline;
+  }
 }
 
 footer {
@@ -66,6 +163,16 @@ footer {
   align-items: flex-start;
   flex-wrap: nowrap;
   background: rgb(154, 140, 152);
+}
+@media (min-width: 400px) {
+  footer > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 }
 footer .footerTop {
   display: flex;
@@ -77,55 +184,89 @@ footer .footerTop {
 }
 footer .footerTop #loggaFooter {
   height: 50px;
-  margin: 5px;
+  margin: 5px 10px;
 }
 footer .footerTop .loggaFooter {
   font-family: Space grotesk, Georgia;
   font-size: 1.3rem;
 }
-footer .footerBottom {
+footer .footerNav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
 }
-footer .footerBottom nav {
+footer .footerNav nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  position: relative;
   padding-left: 5px;
-  height: 150px;
 }
-footer .footerBottom nav p {
-  position: absolute;
-  top: 0px;
+@media (min-width: 400px) {
+  footer .footerNav nav {
+    margin: 10px;
+  }
+}
+footer .footerNav nav p {
   font-family: Space grotesk, Georgia;
-  font-size: 20px;
-  text-decoration: underline;
+  font-size: 1.1rem;
+  color: rgb(34, 34, 59);
+  margin: 0 10px;
 }
-footer .footerBottom nav ul {
-  position: absolute;
-  top: 35px;
+footer .footerNav nav hr {
+  border-top: 1px solid rgb(34, 34, 59);
+  margin: 0 10px;
+}
+footer .footerNav nav ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 0;
+  margin: 0 10px;
 }
-footer .footerBottom nav a {
+footer .footerNav nav a {
   margin: 0px;
   text-decoration: none;
   color: rgb(34, 34, 59);
+  font-family: Space grotesk, Georgia;
 }
-footer .footerBottom nav a:hover {
+footer .footerNav nav a:hover {
   cursor: pointer;
-  color: white;
+  color: rgb(202, 111, 90);
 }
-footer .footerBottom .copyright {
+footer .footerContact {
+  display: none;
+}
+@media (min-width: 400px) {
+  footer .footerContact {
+    display: inline;
+    margin: 10px 20px 10px 0;
+  }
+  footer .footerContact p {
+    font-family: Space grotesk, Georgia;
+    font-size: 1.1rem;
+    color: rgb(34, 34, 59);
+    margin: 0;
+  }
+  footer .footerContact hr {
+    border-top: 1px solid rgb(34, 34, 59);
+    margin: 0;
+  }
+  footer .footerContact ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  footer .footerContact li {
+    color: rgb(34, 34, 59);
+    font-family: Space grotesk, Georgia;
+  }
+}
+footer .copyright {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .websideHeading {
@@ -136,27 +277,56 @@ footer .footerBottom .copyright {
 }
 
 /*Huvudsidan*/
-.welcomePicture {
+@media (min-width: 400px) {
+  .welcomeText {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+.welcomeText .welcomePicture {
   width: 100%;
-  margin: 5px 0;
+  margin-top: 125px;
 }
-
-.welcomeText {
-  padding: 10px;
+@media (min-width: 400px) {
+  .welcomeText .welcomePicture {
+    height: 160px;
+    width: 250px;
+    border: 2px solid rgb(74, 78, 105);
+    border-radius: 10px;
+    margin-left: 10px;
+  }
 }
-.welcomeText h1 {
+@media (min-width: 400px) {
+  .welcomeText .textMainSite {
+    margin-top: 100px;
+  }
+}
+.welcomeText .textMainSite h1 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 2.5rem;
 }
-.welcomeText p {
+@media (min-width: 400px) {
+  .welcomeText .textMainSite h1 {
+    font-size: 2rem;
+  }
+}
+.welcomeText .textMainSite p {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
   font-size: 1.2rem;
 }
-.welcomeText a {
+@media (min-width: 400px) {
+  .welcomeText .textMainSite p {
+    font-size: 1rem;
+  }
+}
+.welcomeText .textMainSite a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,7 +334,7 @@ footer .footerBottom .copyright {
   flex-wrap: nowrap;
   text-decoration: none;
 }
-.welcomeText button {
+.welcomeText .textMainSite button {
   background: rgb(201, 173, 167);
   color: Space grotesk, Georgia;
   border: none;
@@ -172,17 +342,30 @@ footer .footerBottom .copyright {
   font-family: Concert One, arial;
   width: 170px;
   font-size: 1.2rem;
+  color: rgb(74, 78, 105);
+  font-family: Concert One, arial;
+  text-align: center;
 }
-.welcomeText button:hover {
+.welcomeText .textMainSite button:hover {
   cursor: pointer;
   background: rgb(212, 190, 185);
 }
 
+@media (min-width: 400px) {
+  .mainSection {
+    margin: 40px 0;
+  }
+}
 .mainSection h2 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 1.7rem;
+}
+@media (min-width: 400px) {
+  .mainSection h2 {
+    font-size: 1.3rem;
+  }
 }
 .mainSection .popularProducts {
   display: flex;
@@ -190,6 +373,15 @@ footer .footerBottom .copyright {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
+}
+@media (min-width: 400px) {
+  .mainSection .popularProducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
 }
 .mainSection .popularProducts .productPicture {
   height: 100px;
