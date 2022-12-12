@@ -274,6 +274,12 @@ footer .copyright {
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 2rem;
+  margin-top: 130px;
+}
+@media (min-width: 400px) {
+  .websideHeading {
+    margin-top: 125px;
+  }
 }
 
 /*Huvudsidan*/
@@ -281,7 +287,7 @@ footer .copyright {
   .welcomeText {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: nowrap;
   }
@@ -301,7 +307,7 @@ footer .copyright {
 }
 @media (min-width: 400px) {
   .welcomeText .textMainSite {
-    margin-top: 100px;
+    margin-top: 95px;
   }
 }
 .welcomeText .textMainSite h1 {
@@ -324,6 +330,7 @@ footer .copyright {
 @media (min-width: 400px) {
   .welcomeText .textMainSite p {
     font-size: 1rem;
+    width: 300px;
   }
 }
 .welcomeText .textMainSite a {
@@ -373,6 +380,7 @@ footer .copyright {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
+  margin-bottom: 25px;
 }
 @media (min-width: 400px) {
   .mainSection .popularProducts {
@@ -434,69 +442,117 @@ footer .copyright {
   text-align: center;
   font-style: italic;
 }
+@media (min-width: 400px) {
+  .motto {
+    height: 80px;
+  }
+}
 .motto h2 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 1.1rem;
 }
-.motto p {
-  color: rgb(74, 78, 105);
-  font-family: Concert One, arial;
-  text-align: center;
-  font-size: 0.9rem;
+@media (min-width: 400px) {
+  .motto h2 {
+    font-size: 1.2rem;
+    margin-top: 50px;
+  }
 }
 
-.ourHistory {
+@media (min-width: 400px) {
+  .aboutMainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+  }
+}
+.aboutMainContent .ourHistory {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.ourHistory img {
+@media (min-width: 400px) {
+  .aboutMainContent .ourHistory {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 500px;
+    width: 300px;
+    margin-top: 75px;
+  }
+}
+.aboutMainContent .ourHistory img {
   height: 220px;
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
 }
-.ourHistory h3 {
+@media (min-width: 400px) {
+  .aboutMainContent .ourHistory img {
+    height: 150px;
+  }
+}
+.aboutMainContent .ourHistory h3 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
-.ourHistory p {
+.aboutMainContent .ourHistory p {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
-
-.allEmployee h4 {
+@media (min-width: 400px) {
+  .aboutMainContent .ourHistory p {
+    width: 170px;
+  }
+}
+@media (min-width: 400px) {
+  .aboutMainContent .allEmployee {
+    height: 500px;
+    width: 400px;
+    margin-left: 20px;
+  }
+}
+.aboutMainContent .allEmployee h4 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 1.2rem;
 }
-.allEmployee .employeePicture {
+.aboutMainContent .allEmployee .employeePicture {
   height: 100px;
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
 }
-.allEmployee p {
+@media (min-width: 400px) {
+  .aboutMainContent .allEmployee .employeePicture {
+    height: 70px;
+  }
+}
+.aboutMainContent .allEmployee p {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
   font-size: 0.9rem;
 }
-.allEmployee > div:nth-of-type(1) {
+.aboutMainContent .allEmployee > div:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.allEmployee > div:nth-of-type(1) > div {
+.aboutMainContent .allEmployee > div:nth-of-type(1) > div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -511,6 +567,11 @@ footer .copyright {
   font-family: Space grotesk, Georgia;
   text-align: center;
 }
+@media (min-width: 400px) {
+  .sectionProduct h2 {
+    margin-top: 50px;
+  }
+}
 .sectionProduct hr {
   border-top: 3px solid rgb(34, 34, 59);
   width: 90%;
@@ -521,6 +582,15 @@ footer .copyright {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (min-width: 400px) {
+  .sectionProduct .allProducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
 }
 .sectionProduct .allProducts > div {
   display: flex;
@@ -560,41 +630,76 @@ footer .copyright {
   cursor: pointer;
   background: rgb(212, 190, 185);
 }
+@media (min-width: 400px) {
+  .sectionProduct .allProducts .product button {
+    position: relative;
+    width: 150px;
+    height: 20px;
+  }
+}
+@media (min-width: 400px) {
+  .sectionProduct .allProducts .product button span {
+    position: absolute;
+    left: 50px;
+    top: 0;
+  }
+}
+@media (min-width: 400px) {
+  .sectionProduct .allProducts .product button i {
+    position: absolute;
+    left: 90px;
+    top: 2px;
+  }
+}
 
 /*Kontakt*/
-.contactInfo {
+@media (min-width: 400px) {
+  .mainContactSite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+  }
+}
+.mainContactSite .contactInfo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.contactInfo img {
+@media (min-width: 400px) {
+  .mainContactSite .contactInfo {
+    margin-top: 10px;
+  }
+}
+.mainContactSite .contactInfo img {
   height: 200px;
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
 }
-.contactInfo figcaption {
+.mainContactSite .contactInfo figcaption {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
   font-size: 0.7rem;
 }
-.contactInfo h2 {
+.mainContactSite .contactInfo h2 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 0;
 }
-.contactInfo p {
+.mainContactSite .contactInfo p {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
   margin-top: 0;
 }
-
-.contactForm {
+.mainContactSite .contactForm {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -602,13 +707,13 @@ footer .copyright {
   flex-wrap: nowrap;
   margin-bottom: 20px;
 }
-.contactForm h3 {
+.mainContactSite .contactForm h3 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
   font-size: 1.4rem;
 }
-.contactForm form {
+.mainContactSite .contactForm form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -618,23 +723,28 @@ footer .copyright {
   font-family: Concert One, arial;
   text-align: center;
 }
-.contactForm form input, .contactForm form textarea {
+.mainContactSite .contactForm form input, .mainContactSite .contactForm form textarea {
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
 }
-.contactForm form > div {
+.mainContactSite .contactForm form > div {
   text-align: center;
 }
-.contactForm form input[type=submit] {
+.mainContactSite .contactForm form input[type=submit] {
   background: rgb(201, 173, 167);
   color: Space grotesk, Georgia;
   border: none;
   border-radius: 10px;
   font-family: Concert One, arial;
 }
-.contactForm form input[type=submit]:hover {
+.mainContactSite .contactForm form input[type=submit]:hover {
   cursor: pointer;
   background: rgb(212, 190, 185);
+}
+@media (min-width: 400px) {
+  .mainContactSite .contactForm form input[type=submit] {
+    width: 100px;
+  }
 }
 
 /*Recensioer*/
@@ -648,43 +758,74 @@ hr {
   width: 90%;
 }
 
-.reviews {
+@media (min-width: 400px) {
+  .mainReviewSite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+.mainReviewSite .reviews {
   margin: 10px 20px;
 }
-.reviews p {
+@media (min-width: 400px) {
+  .mainReviewSite .reviews {
+    width: 300px;
+    margin: 25px 0 0 0;
+  }
+}
+.mainReviewSite .reviews h3 {
+  display: none;
+}
+@media (min-width: 400px) {
+  .mainReviewSite .reviews h3 {
+    display: inline;
+    color: rgb(34, 34, 59);
+    font-family: Space grotesk, Georgia;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+.mainReviewSite .reviews p {
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
 }
-
-.sendReview h3 {
+.mainReviewSite .sendReview h4 {
   color: rgb(34, 34, 59);
   font-family: Space grotesk, Georgia;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
-.sendReview form {
+.mainReviewSite .sendReview form {
   margin: 20px;
   color: rgb(74, 78, 105);
   font-family: Concert One, arial;
   text-align: center;
 }
-.sendReview form input, .sendReview form textarea {
+.mainReviewSite .sendReview form input, .mainReviewSite .sendReview form textarea {
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
 }
-.sendReview form input[type=submit] {
+.mainReviewSite .sendReview form input[type=submit] {
   background: rgb(201, 173, 167);
   color: Space grotesk, Georgia;
   border: none;
   border-radius: 10px;
   font-family: Concert One, arial;
 }
-.sendReview form input[type=submit]:hover {
+.mainReviewSite .sendReview form input[type=submit]:hover {
   cursor: pointer;
   background: rgb(212, 190, 185);
 }
-.sendReview form input[type=checkbox] {
+@media (min-width: 400px) {
+  .mainReviewSite .sendReview form input[type=submit] {
+    width: 100px;
+  }
+}
+.mainReviewSite .sendReview form input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -693,6 +834,6 @@ hr {
   height: 15px;
   border: 2px solid rgb(34, 34, 59);
 }
-.sendReview form input[type=checkbox]:checked {
+.mainReviewSite .sendReview form input[type=checkbox]:checked {
   background: rgb(201, 173, 167);
 }/*# sourceMappingURL=style.css.map */
