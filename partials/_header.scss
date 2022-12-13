@@ -30,6 +30,7 @@ header{
                 &:hover{
                     .dropdownContent{
                         display: block;
+                        border-radius: 10px;
                     }    
                 }
                 .dropdownContent{
@@ -38,6 +39,8 @@ header{
                     background: $buttonColor;
                     a{
                         display: block;
+                        border-radius: 10px;
+                        padding: 5px;
                         color: $headtextAndFonts;
                         text-decoration: none;
                         &:hover{

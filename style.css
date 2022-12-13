@@ -49,6 +49,7 @@ header .header .headerLeft .dropdown {
 }
 header .header .headerLeft .dropdown:hover .dropdownContent {
   display: block;
+  border-radius: 10px;
 }
 header .header .headerLeft .dropdown .dropdownContent {
   display: none;
@@ -57,6 +58,8 @@ header .header .headerLeft .dropdown .dropdownContent {
 }
 header .header .headerLeft .dropdown .dropdownContent a {
   display: block;
+  border-radius: 10px;
+  padding: 5px;
   color: rgb(34, 34, 59);
   text-decoration: none;
 }
