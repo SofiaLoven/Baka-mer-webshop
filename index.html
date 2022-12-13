@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baka mer - webshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,11 +13,20 @@
     <header>
         <div class="header">
             <div class="headerLeft">
-                <i class="fa-solid fa-bars fontHeading"></i>
+                <div class="dropdown">
+                    <i class="fa-solid fa-bars fontHeading dropDownIcon"></i>
+                    <div class="dropdownContent">
+                        <a href="index.html">Hem</a>
+                        <a href="undersidor/about.html">Om oss</a>
+                        <a href="undersidor/products.html">Produkter</a>
+                        <a href="undersidor/contact.html">Kontakt</a>
+                        <a href="undersidor/review.html">Recensioner</a>
+                    </div>
+                </div>
                 <i class="fa-solid fa-magnifying-glass fontHeading"></i>
             </div>
             <div class="headerMiddle">
-                <img id="loggaHeader" src="images/Logga.png" alt="Företagets logga">
+                <img id="loggaHeader" src="images/logga/LoggaHeader.jpg" alt="Företagets logga">
                 <p class="loggaHeader">Baka mer</p>
             </div>
             <div class="navigation">
@@ -39,11 +48,11 @@
     </header>
         <main>
         <article class="welcomeText">
-            <img class="welcomePicture" src="images/sourdough-bread-horizontal-466-1548048509.gif" alt="Startbild">
+            <img class="welcomePicture" src="images/products/sourdough-bread-horizontal-466-1548048509.gif" alt="Startbild">
             <div class="textMainSite">
                 <h1>Välkommen hit</h1>
                 <p>I denna webshop har vi samlat allt som du behöver för att kunna baka eget surdegsbröd.</p>
-                <a href="undersidor/products.html"><button>Till våra produkter</button></a>
+                <a href="undersidor/products.html">Till våra produkter</a>
             </div>
         </article>
         <section class="mainSection">
@@ -51,25 +60,25 @@
             <div class="popularProducts">
                 <div>
                 <div class="product popular">
-                    <img class="productPicture" src="images/funktion-jaskorg-i-rotting-avlang-30-cm.jpg" alt="Avlång jäskorg i rotting">
-                    <p>Avlång jäskorg i rotting</br>180kr</p>
+                    <img class="productPicture" src="images/products/funktion-jaskorg-i-rotting-avlang-30-cm.jpg" alt="Avlång jäskorg i rotting">
+                    <p>Avlång jäskorg i rotting<br>180kr</p>
                     <button>Köp<i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                 </div>
                 <div class="product popular">
-                    <img class="productPicture" src="images/snittkniv-rund-vete-3.jpg" alt="Snittkniv i runt trähölje">
-                    <p>Snittkniv i tunt trähölje</br>100kr</p>
+                    <img class="productPicture" src="images/products/snittkniv-rund-vete-3.jpg" alt="Snittkniv i runt trähölje">
+                    <p>Snittkniv i tunt trähölje<br>100kr</p>
                     <button>Köp<i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                 </div>
                 </div>
                 <div>
                 <div class="product popular">
-                    <img class="productPicture" src="images/westmark-rund-haevekurv-32082270-45872-1.webp" alt="Rund jäskorg i rotting">
-                    <p>Rund jäskorg i rotting</br>180kr</p>
+                    <img class="productPicture" src="images/products/westmark-rund-haevekurv-32082270-45872-1.webp" alt="Rund jäskorg i rotting">
+                    <p>Rund jäskorg i rotting<br>180kr</p>
                     <button>Köp<i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                 </div>
                 <div class="product popular">
-                    <img class="productPicture" src="images/8d1d5a729a4f6c51828e0dfb6ed7b408.jpg" alt="Gamaldags vetemjöl från Labans Kvarn">
-                    <p>Gamaldags vetemjöl</br>40kr</p>
+                    <img class="productPicture" src="images/products/8d1d5a729a4f6c51828e0dfb6ed7b408.jpg" alt="Gamaldags vetemjöl från Labans Kvarn">
+                    <p>Gamaldags vetemjöl<br>40kr</p>
                     <button>Köp<i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                 </div>
                 </div>
@@ -79,7 +88,7 @@
     <footer>
         <div>
             <div class="footerTop">
-                <img id="loggaFooter" src="images/Logga.png" alt="Företagets logga">
+                <img id="loggaFooter" src="images/logga/Logga.png" alt="Företagets logga">
                 <p class="loggaFooter">Baka mer</p>
             </div>
             <div class="footerNav">
@@ -100,7 +109,7 @@
                 <hr>
                 <ul>
                     <li>018-30 40 06</li>
-                    <li>Hundvägen 18</br> 16866 Bromma</li>
+                    <li>Hundvägen 18<br> 16866 Bromma</li>
                 </ul>
             </div>   
         </div>

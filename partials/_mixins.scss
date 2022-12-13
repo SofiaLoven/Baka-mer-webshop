@@ -1,0 +1,47 @@
+
+@mixin border{
+    border: 2px solid $mainText;
+    border-radius: 10px;
+}
+@mixin heading{
+    color: $headtextAndFonts;
+    font-family: $fontFamilyHeading;
+    text-align:center;
+}
+@mixin mainText {
+    color: $mainText;
+    font-family: $fontFamilyText;
+    text-align: center;
+}
+@mixin hr{
+    border-top:3px solid $headtextAndFonts;
+    width: 90%;
+}
+@mixin button {
+    background: $buttonColor;
+    color: $fontFamilyHeading;
+    border: none;
+    border-radius: 10px;
+    font-family: $fontFamilyText;
+    &:hover{
+        cursor: pointer;
+        background: $buttonHover;
+    }
+}
+@mixin desktop{
+    @media (min-width:400px){
+        @content;
+    }
+}
+@mixin flex(
+    $direction: row,
+    $justify: flex-start,
+    $align: flex-start,
+    $wrap: nowrap
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align; 
+    flex-wrap: $wrap;
+}

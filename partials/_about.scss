@@ -1,0 +1,84 @@
+.motto{
+    text-align: center;
+    font-style: italic;
+    @include desktop{
+        height: 80px;
+    }
+    h2{
+        @include heading;
+        font-size: 1.1rem;
+        @include desktop{
+            font-size: 1.2rem;
+            margin-top: 50px;
+        }
+    }
+}
+.aboutMainContent{
+    @include desktop{
+        @include flex($justify:space-around);
+        margin-top: 50px;
+    }
+    .ourHistory{
+        @include flex($direction:column, $align:center);
+        @include desktop{
+            @include flex($direction:column, $align:center);
+            height: 500px;
+            width: 280px;
+            margin-top: 75px;
+        }
+        img{
+            height:220px;
+            @include border;
+            @include desktop{
+                height: 150px;
+            }
+        }
+        h3{
+            @include heading;
+            font-size: 1.1rem;
+        }
+        p{
+            @include mainText;
+            font-size: 0.8rem;
+            @include desktop{
+                width: 170px;
+            }
+        }
+    }
+    .allEmployee{
+        width: 100%;
+        @include desktop{
+            width: 380px; 
+            margin-left: 20px;
+        }
+        h4{
+            @include heading;
+            font-size: 1.2rem;
+        }
+        .employeePicture{
+            height:100px;
+            @include border;
+        }
+        p{
+            @include mainText;
+            font-size: 0.9rem;
+        }
+        > div:nth-of-type(1){
+            @include flex($direction:column, $align:center);
+            > div{
+                @include flex($justify:space-evenly);
+                width: 100%;
+            }
+        }
+        .employee{
+            @include flex($direction:column, $align:center);
+            height: 200px;
+            width: 200px;
+            @include desktop{
+                height: 150px;
+                width: 200px;
+                margin: 5px;
+            }
+        }
+    }
+}  

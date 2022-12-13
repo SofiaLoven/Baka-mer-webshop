@@ -1,0 +1,105 @@
+.welcomeText{
+    @include desktop{
+        @include flex($justify:space-around);
+    }
+    .welcomePicture{
+        width: 100%;
+        margin-top: 125px;
+        @include desktop{
+            height: 160px;
+            width: 250px;
+            @include border;
+            margin-left: 10px; 
+        }
+    }
+    .textMainSite{
+        @include flex($direction:column, $align:center);
+        @include desktop{
+            margin-top:95px;
+        }
+        h1{
+            @include heading;
+            font-size: 2.5rem;
+            @include desktop{
+                font-size: 2rem;
+            }
+        }
+        p{
+            @include mainText;
+            font-size: 1.2rem;
+            @include desktop{
+                font-size: 1rem;
+                width: 300px;
+            }
+        }
+        a{
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 0 5px;
+            width: 170px;
+            height: 30px;
+            font-size: 1.2rem;
+            background: $buttonColor;
+            @include desktop{
+                width: 150px;
+                height: 20px;
+                font-size: 1rem;
+            }
+            @include mainText;
+            &:hover{
+                background:$buttonHover;
+            }
+        }
+        button{
+            @include button;
+            width: 170px;
+            font-size: 1.2rem;
+            @include mainText;
+        }  
+    }             
+}
+.mainSection{
+    @include desktop{
+        margin: 40px 0;
+    }
+    h2{
+        @include heading;
+        font-size: 1.7rem;
+        @include desktop{
+            font-size: 1.3rem;
+        }
+    }
+    .popularProducts{
+        @include flex($direction:column);
+        margin-bottom: 25px;
+        @include desktop{
+            @include flex($direction:row);
+        }
+        .productPicture{
+            height: 100px;
+            @include border;
+        }
+        .product.popular{
+            @include flex($direction:column, $align: center);
+            height: 200px;
+            width: 150px;
+            margin: 20px 0;
+            p{
+                @include mainText;
+                font-size: 1.2rem;
+            }
+        }
+        > div{
+            @include flex($justify:space-evenly);
+            width:100%;
+        }
+        button{
+            @include button;
+            width: 70px;
+            font-size: 1rem;
+            i{
+                margin-left:10px;
+            }
+        }
+    }
+}

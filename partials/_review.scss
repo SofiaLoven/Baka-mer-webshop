@@ -1,0 +1,61 @@
+.stars{
+    text-align: center;
+    color:$buttonColor;
+}
+hr{
+    @include hr;
+}
+.mainReviewSite{
+    @include desktop{
+        @include flex($justify:space-around);
+    }
+    .reviews{
+        padding: 10px 20px;
+        @include desktop{
+            width: 300px;
+            padding: 5px 20px;
+            @include flex($direction:column,$align:center);
+        }
+        h3{
+            display: none;
+            @include desktop{
+                display: inline;
+                @include heading;
+                font-size: 1.2rem;
+            }
+        }
+        p{
+            @include mainText;
+        }
+    
+    }
+    .sendReview{
+        h4{
+            @include heading;
+            font-size: 1.2rem;
+        }
+        form{
+            margin:20px;
+            @include mainText;
+            input, textarea{
+                @include border;
+            }
+            input[type="submit"]{
+                @include button;
+                @include desktop{
+                    width: 100px;
+                }
+            }
+            input[type="checkbox"]{
+                appearance: none; 
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                border: 2px solid $headtextAndFonts;
+            }
+            input[type="checkbox"]:checked{
+                background: $buttonColor;
+            }
+        }
+    }
+}

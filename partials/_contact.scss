@@ -1,0 +1,53 @@
+.mainContactSite{
+    @include desktop{
+        @include flex($direction:row, $justify:space-around);
+        margin-top: 80px;
+    }
+    .contactInfo{
+        @include flex($direction:column, $align:center);
+        @include desktop{
+            margin-top: 10px;
+        }
+        img{
+            height:200px;
+            @include border;
+        }
+        figcaption{
+            @include mainText;
+            font-size: 0.7rem;
+        }
+        h2{
+            @include heading;
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+        p{
+            @include mainText;
+            margin-top: 0;
+        }
+    }
+    .contactForm{
+        @include flex($direction:column, $align:center);
+        margin-bottom: 20px;
+        h3{
+            @include heading;
+            font-size: 1.4rem;
+        }
+        form{
+            @include flex($direction:column, $align:center);
+            @include mainText;
+            input, textarea{
+                @include border;
+            }
+            > div{
+                text-align: center;
+            }
+            input[type="submit"]{
+                @include button;
+                @include desktop{
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

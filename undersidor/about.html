@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baka mer - webshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./../style.css">
 </head>
@@ -13,11 +13,20 @@
     <header>
     <div class="header">
         <div class="headerLeft">
-            <i class="fa-solid fa-bars fontHeading"></i>
+            <div class="dropdown">
+                <i class="fa-solid fa-bars fontHeading dropDownIcon"></i>
+                <div class="dropdownContent">
+                    <a href="./../index.html">Hem</a>
+                    <a href="./about.html">Om oss</a>
+                    <a href="./products.html">Produkter</a>
+                    <a href="./contact.html">Kontakt</a>
+                    <a href="./review.html">Recensioner</a>
+                </div>
+            </div>
             <i class="fa-solid fa-magnifying-glass fontHeading"></i>
         </div>
         <div class="headerMiddle">
-            <img id="loggaHeader" src="./../images/Logga.png" alt="Företagets logga">
+            <img id="loggaHeader" src="./../images/logga/LoggaHeader.jpg" alt="Företagets logga">
             <p class="loggaHeader">Baka mer</p>
         </div>
         <nav>
@@ -43,7 +52,7 @@
         <div class="aboutMainContent">
             <div>
                 <article class="ourHistory">
-                    <img src="./../images/ownerdog.jpg" alt="Bild på grundarna av företaget">
+                    <img src="./../images/dogs/ownerdog.jpg" alt="Bild på grundarna av företaget">
                     <h3>Vår historia</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut deleniti facilis veritatis distinctio possimus quod sint laboriosam eaque expedita itaque.</p>
                 </article>
@@ -54,69 +63,70 @@
                     <div>
                         <div>
                             <div class="employee">
-                                <img class="employeePicture" src="./../images/ceodog.jpg" alt="Bild på anställd">
-                                <p>Ulla Dogsson</br>VD</p>
+                                <img class="employeePicture" src="./../images/dogs/ceodog.jpg" alt="Bild på anställd">
+                                <p>Ulla Dogsson<br>VD</p>
                             </div>
                             <div class="employee">
-                                <img class="employeePicture" src="./../images/smartdog.jpg" alt="Bild på anställd">
-                                <p>Eva Dogsson</br>Ekonomiansvarig</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="employee">
-                                <img class="employeePicture" src="./../images/corgibaker.jpg" alt="Bild på anställd">
-                                <p>Anders Dogsson</br>Provbagare</p>
-                            </div>
-                            <div class="employee">
-                                <img class="employeePicture" src="./../images/corgitaster.jpg" alt="Bild på anställd">
-                                <p>Peo Dogsson</br>Provsmakare</p>
+                                <img class="employeePicture" src="./../images/dogs/smartdog.jpg" alt="Bild på anställd">
+                                <p>Eva Dogsson<br>Ekonomiansvarig</p>
                             </div>
                         </div>
                         <div>
                             <div class="employee">
-                                <img class="employeePicture" src="./../images/computerdog.jpg" alt="Bild på anställd">
-                                <p>Sara Dogsson</br>IT-ansvarig</p>
+                                <img class="employeePicture" src="./../images/dogs/corgibaker.jpg" alt="Bild på anställd">
+                                <p>Anders Dogsson<br>Provbagare</p>
                             </div>
                             <div class="employee">
-                                <img class="employeePicture" src="./../images/tasterdog.jpg" alt="Bild på anställd">
-                                <p>Max Dogsson</br>Inköpare</p>
+                                <img class="employeePicture" src="./../images/dogs/corgitaster.jpg" alt="Bild på anställd">
+                                <p>Peo Dogsson<br>Provsmakare</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="employee">
+                                <img class="employeePicture" src="./../images/dogs/computerdog.jpg" alt="Bild på anställd">
+                                <p>Sara Dogsson<br>IT-ansvarig</p>
+                            </div>
+                            <div class="employee">
+                                <img class="employeePicture" src="./../images/dogs/tasterdog.jpg" alt="Bild på anställd">
+                                <p>Max Dogsson<br>Inköpare</p>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        </main>
+    </main>
     <footer>
         <div>
             <div class="footerTop">
-                <img id="loggaFooter" src="./../images/Logga.png" alt="Företagets logga">
+                <img id="loggaFooter" src="./../images/logga/Logga.png" alt="Företagets logga">
                 <p class="loggaFooter">Baka mer</p>
             </div>
             <div class="footerNav">
                 <nav>
                     <p>Länkar</p>
                     <hr>
-                        <ul>
+                    <ul>
                         <li><a class="linksFooter" href="./../index.html">Hem</a></li>
                         <li><a class="linksFooter" href="./about.html">Om oss</a></li>
                         <li><a class="linksFooter" href="./products.html">Produkter</a></li>
                         <li><a class="linksFooter" href="./contact.html">Kontakt</a></li>
                         <li><a class="linksFooter" href="./review.html">Recensioner</a></li>
                     </ul>
-                </div>
-                <div class="footerContact">
-                    <p>Konakt</p>
-                    <hr>
-                    <ul>
-                        <li>018-30 40 06</li>
-                        <li>Hundvägen 18</br> 16866 Bromma</li>
-                    </ul>
-                </div>   
+                </nav>    
             </div>
-                <div>
-                <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
-            </div>
+            <div class="footerContact">
+                <p>Konakt</p>
+                <hr>
+                <ul>
+                    <li>018-30 40 06</li>
+                    <li>Hundvägen 18<br> 16866 Bromma</li>
+                </ul>
+            </div>   
+        </div>
+        <div>
+            <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
+        </div>
     </footer>
 </body>
 </html>

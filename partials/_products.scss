@@ -1,0 +1,55 @@
+.sectionProduct{
+    h2{
+        @include heading;
+        @include desktop{
+            margin-top: 50px;
+        }
+    }
+    hr{
+        @include hr;
+    }
+    .allProducts{
+        @include flex($direction:column, $align:center);
+        @include desktop{
+            @include flex($direction:row);
+        }
+        > div{
+            @include flex($justify:space-evenly);
+            width: 100%;
+        }
+        .product{
+            @include flex($direction:column, $align:center);
+            width: 150px;
+            margin:20px 0;
+            img{
+                height: 100px;
+                @include border;
+            }
+            p{
+                @include mainText;
+            }
+            button{
+                @include button;
+                @include desktop{
+                    position: relative;
+                    width: 150px;
+                    height: 20px;
+                }
+                span{
+                    @include desktop{
+                        position: absolute;
+                        left:50px;
+                        top:0;
+                    }
+                }
+                i{
+                    @include desktop{
+                        position: absolute;
+                        left:90px;
+                        top:2px;
+                    }
+                }
+            }
+        }
+    }
+}

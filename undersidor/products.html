@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baka mer - webshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./../style.css">
 </head>
@@ -13,11 +13,20 @@
     <header>
     <div class="header">
         <div class="headerLeft">
-            <i class="fa-solid fa-bars fontHeading"></i>
+            <div class="dropdown">
+                <i class="fa-solid fa-bars fontHeading dropDownIcon"></i>
+                <div class="dropdownContent">
+                    <a href="./../index.html">Hem</a>
+                    <a href="./about.html">Om oss</a>
+                    <a href="./products.html">Produkter</a>
+                    <a href="./contact.html">Kontakt</a>
+                    <a href="./review.html">Recensioner</a>
+                </div>
+            </div>
             <i class="fa-solid fa-magnifying-glass fontHeading"></i>
         </div>
         <div class="headerMiddle">
-            <img id="loggaHeader" src="./../images/Logga.png" alt="Företagets logga">
+            <img id="loggaHeader" src="./../images/logga/LoggaHeader.jpg" alt="Företagets logga">
             <p class="loggaHeader">Baka mer</p>
         </div>
         <nav>
@@ -43,25 +52,25 @@
             <div class="allProducts">
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/8d1d5a729a4f6c51828e0dfb6ed7b408.jpg" alt="Gamaldags vetemjöl">
-                        <p>Gamaldags vetemjöl - Labans Kvarn</br>Ett rustikt vetemjöl med bra jäskraft</br>40kr</p>
+                        <img class="picture" src="./../images/products/8d1d5a729a4f6c51828e0dfb6ed7b408.jpg" alt="Gamaldags vetemjöl">
+                        <p>Gamaldags vetemjöl - Labans Kvarn<br>Ett rustikt vetemjöl med bra jäskraft<br>40kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/labans-kvarn-durumsikt-2kg-4.jpg" alt="Durumsikt">
-                        <p>Durumikt - Labans Kvarn</br>Ett utmärkt val för hemgjord pasta</br>35kr</p>
+                        <img class="picture" src="./../images/products/labans-kvarn-durumsikt-2kg-4.jpg" alt="Durumsikt">
+                        <p>Durumikt - Labans Kvarn<br>Ett utmärkt val för hemgjord pasta<br>35kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/warbo Möjl.jpg" alt="Vetemjöl">
-                        <p>Vetemjöl - Warbo Kvarn</br>Ett fint vetemjöl som passar till alla typer av bröd</br>45kr</p>
+                        <img class="picture" src="./../images/products/warboMjol.jpg" alt="Vetemjöl">
+                        <p>Vetemjöl - Warbo Kvarn<br>Ett fint vetemjöl som passar till alla typer av bröd<br>45kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/ragmjol.jpg" alt="Rågmjöl">
-                        <p>Rågmjöl - Labans Kvarn</br>Ett grovt rågmjöl som kan få vilken surdeg som helst att vakna till liv</br>55kr</p>
+                        <img class="picture" src="./../images/products/ragmjol.jpg" alt="Rågmjöl">
+                        <p>Rågmjöl - Labans Kvarn<br>Ett grovt rågmjöl som kan få vilken surdeg som helst att vakna till liv<br>55kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
@@ -73,25 +82,25 @@
             <div class="allProducts">
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/funktion-jaskorg-i-rotting-avlang-30-cm.jpg" alt="Avlång jäskorg i rotting">
-                        <p>Avlång jäskorg i rotting</br>180kr</p>
+                        <img class="picture" src="./../images/products/funktion-jaskorg-i-rotting-avlang-30-cm.jpg" alt="Avlång jäskorg i rotting">
+                        <p>Avlång jäskorg i rotting<br>180kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/westmark-rund-haevekurv-32082270-45872-1.webp" alt="Rund jäskorg i rotting">
-                        <p>Rund jäskorg i rotting</br>180kr</p>
+                        <img class="picture" src="./../images/products/westmark-rund-haevekurv-32082270-45872-1.webp" alt="Rund jäskorg i rotting">
+                        <p>Rund jäskorg i rotting<br>180kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/jaskorg papper.jpg" alt="Avlång jäskorg i papp">
-                        <p>Avlång jäskorg i pressat papper</br>120kr</p>
+                        <img class="picture" src="./../images/products/jaskorgpapper.jpg" alt="Avlång jäskorg i papp">
+                        <p>Avlång jäskorg i pressat papper<br>120kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/jaskorg överdrag.jpg" alt="Rund jäskorg med medföljande överdrag">
-                        <p>Rund jäskorg med linne-överdrag</br>200kr</p>
+                        <img class="picture" src="./../images/products/jaskorgoverdrag.jpg" alt="Rund jäskorg med medföljande överdrag">
+                        <p>Rund jäskorg med linne-överdrag<br>200kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
@@ -103,25 +112,25 @@
             <div class="allProducts">
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/böjdSnittkniv.jpg" alt="Böjd snittkniv i plast">
-                        <p>Böjd snittkniv i plast</br>80kr</p>
+                        <img class="picture" src="./../images/products/böjdSnittkniv.jpg" alt="Böjd snittkniv i plast">
+                        <p>Böjd snittkniv i plast<br>80kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/snittkniv-rund-vete-3.jpg" alt="Snittkniv i runt trähölje">
-                        <p>Snittkniv i runt trähölje med utbytbart rakblad</br>100kr</p>
+                        <img class="picture" src="./../images/products/snittkniv-rund-vete-3.jpg" alt="Snittkniv i runt trähölje">
+                        <p>Snittkniv i runt trähölje med utbytbart rakblad<br>100kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/etuiSnittkniv.jpg" alt="Etui i läder">
-                        <p>Etui i lädare för förvaring av snittkniv</br>45kr</p>
+                        <img class="picture" src="./../images/products/etuiSnittkniv.jpg" alt="Etui i läder">
+                        <p>Etui i lädare för förvaring av snittkniv<br>45kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/rakblad.jpg" alt="Extra rakblad">
-                        <p>Extra rakblad till snittkniven</br>60kr</p>
+                        <img class="picture" src="./../images/products/rakblad.jpg" alt="Extra rakblad">
+                        <p>Extra rakblad till snittkniven<br>60kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
@@ -133,25 +142,25 @@
             <div class="allProducts">
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/degskrapa-red-2.jpg" alt="Degskrapa i plast">
-                        <p>Degskrapa i plast</br>45kr</p>
+                        <img class="picture" src="./../images/products/degskrapa-red-2.jpg" alt="Degskrapa i plast">
+                        <p>Degskrapa i plast<br>45kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/degskrapa-metall.jpg" alt="Degskrapa i metall">
-                        <p>Degskrapa i metall</br>70kr</p>
+                        <img class="picture" src="./../images/products/degskrapa-metall.jpg" alt="Degskrapa i metall">
+                        <p>Degskrapa i metall<br>70kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
                 <div>
                     <div class="product">
-                        <img class="picture" src="./../images/sikt.jpg" alt="Mjöl-sikt">
-                        <p>Mjölsikt i trä</br>75kr</p>
+                        <img class="picture" src="./../images/products/sikt.jpg" alt="Mjöl-sikt">
+                        <p>Mjölsikt i trä<br>75kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                     <div class="product">
-                        <img class="picture" src="./../images/vört.jpg" alt="Flaska med flytande vörtextrakt">
-                        <p>Flytande vörtextrakt på flaska</br>40kr</p>
+                        <img class="picture" src="./../images/products/vort.jpg" alt="Flaska med flytande vörtextrakt">
+                        <p>Flytande vörtextrakt på flaska<br>40kr</p>
                         <button><span>Köp</span><i class="fa-solid fa-bag-shopping fontHeading"></i></button>
                     </div>
                 </div>
@@ -161,33 +170,34 @@
     <footer>
         <div>
             <div class="footerTop">
-                <img id="loggaFooter" src="./../images/Logga.png" alt="Företagets logga">
+                <img id="loggaFooter" src="./../images/logga/Logga.png" alt="Företagets logga">
                 <p class="loggaFooter">Baka mer</p>
             </div>
             <div class="footerNav">
                 <nav>
                     <p>Länkar</p>
                     <hr>
-                        <ul>
+                    <ul>
                         <li><a class="linksFooter" href="./../index.html">Hem</a></li>
                         <li><a class="linksFooter" href="./about.html">Om oss</a></li>
                         <li><a class="linksFooter" href="./products.html">Produkter</a></li>
                         <li><a class="linksFooter" href="./contact.html">Kontakt</a></li>
                         <li><a class="linksFooter" href="./review.html">Recensioner</a></li>
                     </ul>
-                </div>
-                <div class="footerContact">
-                    <p>Konakt</p>
-                    <hr>
-                    <ul>
-                        <li>018-30 40 06</li>
-                        <li>Hundvägen 18</br> 16866 Bromma</li>
-                    </ul>
-                </div>   
+                </nav>    
             </div>
-                <div>
-                <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
-            </div>
+            <div class="footerContact">
+                <p>Konakt</p>
+                <hr>
+                <ul>
+                    <li>018-30 40 06</li>
+                    <li>Hundvägen 18<br> 16866 Bromma</li>
+                </ul>
+            </div>   
+        </div>
+        <div>
+            <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
+        </div>
     </footer>
 </body>
 </html>

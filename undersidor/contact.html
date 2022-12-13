@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baka mer - webshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./../style.css">
 </head>
@@ -13,11 +13,20 @@
     <header>
     <div class="header">
         <div class="headerLeft">
-            <i class="fa-solid fa-bars fontHeading"></i>
+            <div class="dropdown">
+                <i class="fa-solid fa-bars fontHeading dropDownIcon"></i>
+                <div class="dropdownContent">
+                    <a href="./../index.html">Hem</a>
+                    <a href="./about.html">Om oss</a>
+                    <a href="./products.html">Produkter</a>
+                    <a href="./contact.html">Kontakt</a>
+                    <a href="./review.html">Recensioner</a>
+                </div>
+            </div>
             <i class="fa-solid fa-magnifying-glass fontHeading"></i>
         </div>
         <div class="headerMiddle">
-            <img id="loggaHeader" src="./../images/Logga.png" alt="Företagets logga">
+            <img id="loggaHeader" src="./../images/logga/LoggaHeader.jpg" alt="Företagets logga">
             <p class="loggaHeader">Baka mer</p>
         </div>
         <nav>
@@ -40,31 +49,31 @@
         <div class="mainContactSite">
             <section class="contactInfo">
                 <figure>
-                    <img src="./../images/dog-houses3.jpg" alt="Bild på företagets byggnad">
+                    <img src="./../images/dogs/dog-houses3.jpg" alt="Bild på företagets byggnad">
                     <figcaption>Kontoret på Hundvägen i Bromma</figcaption>
                 </figure>
                 <div>
                     <h2>Våra kontaktuppgifter</h2>
-                    <p>Hundvägen 18, 16866 Bromma</br>018-30 40 06</br>bakamer@hundmail.com</p> 
+                    <p>Hundvägen 18, 16866 Bromma<br>018-30 40 06<br>bakamer@hundmail.com</p> 
                 </div>
             </section>
             <section class="contactForm">
                 <h3>Skriv gärna till oss</h3>
                 <form>
-                    <label for="name">Namn</label></br>
-                    <input type="text" id="name" name="name"></br>
-                    <label for="email">Email</label></br>
-                    <input type="text" name="email" id="email"></br>
+                    <label for="name">Namn</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="text" name="email" id="email"><br>
                     <div>
-                        <legend>Markera ämnet som ditt ärende gäller</legend></br>
-                        <label>Frågor om produkt<input type="radio" name="matter" /> </label></br>
-                        <label>Frågor om företaget<input type="radio" name="matter" /> </label></br>
-                        <label>Synpunkter på weplatesen<input type="radio" name="matter" /></label></br>
+                        <span>Markera ämnet som ditt ärende gäller</span><br>
+                        <label>Frågor om produkt<input type="radio" name="matter" /> </label><br>
+                        <label>Frågor om företaget<input type="radio" name="matter" /> </label><br>
+                        <label>Synpunkter på weplatesen<input type="radio" name="matter" /></label><br>
                         <label>Övrigt<input type="radio" name="matter" /></label>
                     </div>
                     <br>
-                    <label class="labelTextArea" for="textAria">Skriv ditt medelande här</label></br>
-                    <textarea name="textAria" cols="30" rows="10"></textarea></br>
+                    <label class="labelTextArea" for="textAria">Skriv ditt medelande här</label><br>
+                    <textarea name="textAria" id="textAria" cols="30" rows="10"></textarea><br>
                     <input type="submit">
                 </form>
             </section>
@@ -73,33 +82,34 @@
     <footer>
         <div>
             <div class="footerTop">
-                <img id="loggaFooter" src="./../images/Logga.png" alt="Företagets logga">
+                <img id="loggaFooter" src="./../images/logga/Logga.png" alt="Företagets logga">
                 <p class="loggaFooter">Baka mer</p>
             </div>
             <div class="footerNav">
                 <nav>
                     <p>Länkar</p>
                     <hr>
-                        <ul>
+                    <ul>
                         <li><a class="linksFooter" href="./../index.html">Hem</a></li>
                         <li><a class="linksFooter" href="./about.html">Om oss</a></li>
                         <li><a class="linksFooter" href="./products.html">Produkter</a></li>
                         <li><a class="linksFooter" href="./contact.html">Kontakt</a></li>
                         <li><a class="linksFooter" href="./review.html">Recensioner</a></li>
                     </ul>
-                </div>
-                <div class="footerContact">
-                    <p>Konakt</p>
-                    <hr>
-                    <ul>
-                        <li>018-30 40 06</li>
-                        <li>Hundvägen 18</br> 16866 Bromma</li>
-                    </ul>
-                </div>   
+                </nav>    
             </div>
-                <div>
-                <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
-            </div>
+            <div class="footerContact">
+                <p>Konakt</p>
+                <hr>
+                <ul>
+                    <li>018-30 40 06</li>
+                    <li>Hundvägen 18<br> 16866 Bromma</li>
+                </ul>
+            </div>   
+        </div>
+        <div>
+            <p class="copyright"><i class="fa-regular fa-copyright"></i> COPYRIGHT BAKAMER.SE 2022</p>
+        </div>
     </footer>
 </body>
 </html>

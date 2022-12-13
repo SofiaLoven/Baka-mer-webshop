@@ -1,0 +1,90 @@
+footer{
+    @include flex($direction:column);
+    background: $footAndHead;
+    > div:nth-of-type(1){
+        @include desktop{
+            @include flex($justify:space-between);
+            width: 100%;
+        }
+    }
+    .footerTop{
+        @include flex;
+        padding-top: 10px;
+        #loggaFooter{
+            height: 50px;
+            margin: 5px 10px;
+        }
+        .loggaFooter{
+            font-family: $fontFamilyHeading;
+            font-size: 1.3rem;
+        }
+    }
+    .footerNav{
+        @include flex($direction:column);
+        nav{
+            @include flex($direction:column);
+            padding-left: 5px;
+            @include desktop{
+                margin: 10px;
+            }
+            p{
+                font-family: $fontFamilyHeading;
+                font-size: 1.1rem;
+                color: $headtextAndFonts;
+                margin:0 10px;
+            }
+            hr{
+                border-top:1px solid $headtextAndFonts;
+                margin: 0 10px;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0 10px;
+            }
+            a{
+                margin:0px;
+                text-decoration: none;
+                color: $headtextAndFonts;
+                font-family: $fontFamilyHeading;
+                &:hover{
+                    cursor: pointer;
+                    color: $activeColor;
+                }
+            }
+        }
+    }
+    .footerContact{
+        display: none;
+        @include desktop{
+            display: inline;
+            margin: 10px 20px 10px 0;
+            p{
+                font-family: $fontFamilyHeading;
+                font-size: 1.1rem;
+                color: $headtextAndFonts;
+                margin:0;
+            }
+            hr{
+                border-top:1px solid $headtextAndFonts;
+                margin:0;
+            }
+            ul{
+                list-style-type: none;
+                margin:0;
+                padding: 0;
+            }
+            li{
+                color: $headtextAndFonts;
+                font-family: $fontFamilyHeading;
+            }
+
+        }
+
+    }
+    .copyright{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+}

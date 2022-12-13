@@ -1,0 +1,131 @@
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    .header{
+        @include flex($justify: space-between);
+        position: relative;
+        background: $lightHeading;
+        height: 130px;
+        width: 100%;
+        @include desktop{
+            height: 100px;
+        }
+        .fontHeading{
+            font-size: 1.3rem;
+            margin: 5px;
+            color: $headtextAndFonts;
+        }
+        .headerLeft{
+            @include flex($align:center);
+            height: 130px;
+            padding: 5px;
+            color: $headtextAndFonts;
+            @include desktop{
+                display: none;
+            }
+            .dropdown{
+                position:relative;
+                display: inline-block;
+                &:hover{
+                    .dropdownContent{
+                        display: block;
+                    }    
+                }
+                .dropdownContent{
+                    display: none;
+                    position: absolute;
+                    background: $buttonColor;
+                    a{
+                        display: block;
+                        color: $headtextAndFonts;
+                        text-decoration: none;
+                        &:hover{
+                            background: $buttonHover;
+                        }
+                    }
+                }
+            }
+        }
+        .headerMiddle{
+            @include flex($direction:column, $align:center);
+            height: 130px;
+            @include desktop{
+                @include flex($align:center);
+                height: 100px;
+                margin-left: 20px;
+            }
+        }
+        .loggaHeader{
+            position: absolute;
+            top:40px;
+            font-family: $fontFamilyHeading;
+            font-size: 30px;
+            color: $headtextAndFonts;
+            @include desktop{
+                font-size: 20px;
+
+            }
+        }
+        #loggaHeader{
+            position: absolute;
+            top: 20px;
+            height:60px;
+            width:60px;
+            @include desktop{
+                height: 40px;
+                width:40px;
+            }
+        }
+        .headerRight{
+            @include flex($align:center);
+            padding: 5px; 
+            height: 130px;
+            color: $headtextAndFonts;
+            @include desktop{
+                @include flex($justify:flex-end, $align:center);
+                height: 100px;
+                margin-right: 20px;
+            }
+        }
+        .navigation{
+            display: none;
+            @include desktop{
+                display: inline;
+                position: absolute;
+                right: 320px;
+            }
+        }
+        nav{
+            display: none;
+            @include desktop{
+                display: inline;
+                position: relative;
+                ul{
+                    @include flex($justify:space-evenly);
+                    position: absolute;
+                    top:70px;
+                    width: 300px;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                a{
+                    color: $headtextAndFonts;
+                    font-family: $fontFamilyHeading;
+                    text-decoration: none;
+                    font-size: 10px;
+                    margin: 8px;
+                    &:hover{
+                        color: $activeColor;
+                        text-decoration: underline;
+                    }
+                }
+                .active{
+                    color: $activeColor;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+} 
