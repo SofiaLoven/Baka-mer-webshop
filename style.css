@@ -866,6 +866,7 @@ hr {
 .mainReviewSite .sendReview form input, .mainReviewSite .sendReview form textarea {
   border: 2px solid rgb(74, 78, 105);
   border-radius: 10px;
+  margin: 10px;
 }
 .mainReviewSite .sendReview form input[type=submit] {
   background: rgb(201, 173, 167);
@@ -873,6 +874,7 @@ hr {
   border: none;
   border-radius: 10px;
   font-family: Ubuntu, arial;
+  margin: 10px;
 }
 .mainReviewSite .sendReview form input[type=submit]:hover {
   cursor: pointer;
@@ -883,15 +885,11 @@ hr {
     width: 100px;
   }
 }
-.mainReviewSite .sendReview form input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 2px solid rgb(34, 34, 59);
-}
-.mainReviewSite .sendReview form input[type=checkbox]:checked {
-  background: rgb(201, 173, 167);
+.mainReviewSite .sendReview form select {
+  margin: 10px;
+  border: 2px solid rgb(74, 78, 105);
+  border-radius: 10px;
+  color: rgb(74, 78, 105);
+  font-family: Ubuntu, arial;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
